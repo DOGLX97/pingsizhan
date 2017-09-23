@@ -52,7 +52,7 @@
 /*******************banner*******************/
 #banner{
     height: 565px;
-    background: url("../img/banner.jpg") no-repeat 0px 0/cover;
+    background: url("../img/sky.jpg") no-repeat 0px 0/cover;
     position: relative;
 }
 #canvas{
@@ -116,12 +116,12 @@
     margin-bottom: 40px;
 }
 .aimg1{
-    background: url("../img/aimg1.jpg") no-repeat center;
+    background: url("../img/black2.jpg") no-repeat center;
     background-size: cover;
     height: 300px;
 }
 .aimg2{
-    background: url("../img/aimg2.jpg") no-repeat center;
+    background: url("../img/black.jpg") no-repeat center;
     background-size: cover;
     height: 300px;
     text-align: center;
@@ -141,12 +141,55 @@
 }
 .myself{
     margin-top: 70px;
-    background: url("../img/self.jpg") no-repeat 0 0/cover;
+    background: url("../img/black.jpg") no-repeat 0 0/cover;
     padding-top: 135.9%;
 }
 
-
-
+#about button{
+    width: 95px;
+    height: 40px;
+    margin: 10px;
+    background: #ed3267;
+    color: #fff;
+    border: 0;
+    margin: 150px;
+}
+/******************skills**************/
+#skills{
+    background: url("../img/skills-bg.jpg") no-repeat 50% 0/cover fixed;
+}
+#skills .fa{
+    width: 100px;
+}
+#skills i{
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    margin: 50px;
+    color: #fff;
+    text-align: center;
+}
+#skills h2{
+    color: #ed3267;
+}
+#my-skills h1{
+    color: #ed3267;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+#my-skills{
+    background:#fff;
+    color:#ed3267;
+    font-weight: bold;
+}
+#my-skills p{
+    border-bottom: 3px solid #000;
+    margin-bottom:30px;
+}
+.skills-bg{
+    height: 300px;
+    background: url("../img/skills-bg.jpg") no-repeat 50% 0/cover fixed;
+}
 
 
 
