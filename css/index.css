@@ -92,20 +92,6 @@
     background: #ed3267;
     color: #ffffff;
 }
-@media(max-width: 768px){
-    #menu{
-        display: block;
-    }
-    #nav-bar{
-        display: none;
-    }
-    #banner{
-        background-position: center;
-    }
-    #content{
-        width: 115px;
-    }
-}
 /*******about******************************/
 #about{
     overflow: hidden;
@@ -119,6 +105,19 @@
     background: url("../img/black2.jpg") no-repeat center;
     background-size: cover;
     height: 300px;
+    position: relative;
+}
+.aimg1 p{
+    width: 60%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .aimg2{
     background: url("../img/black.jpg") no-repeat center;
@@ -131,6 +130,18 @@
 }
 .fa{
     width: 20px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.fa:hover{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 .js-icon{
     display: inline-block;
@@ -154,6 +165,15 @@
     border: 0;
     margin: 150px;
 }
+.self-info{
+    padding: 0;
+    margin: 10px 0;
+}
+.self-info li{
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 12px;
+}
 /******************skills**************/
 #skills{
     background: url("../img/skills-bg.jpg") no-repeat 50% 0/cover fixed;
@@ -169,8 +189,9 @@
     color: #fff;
     text-align: center;
 }
-#skills h2{
+#skills h3{
     color: #ed3267;
+    margin-bottom: 10px;
 }
 #my-skills h1{
     color: #ed3267;
@@ -191,7 +212,24 @@
     background: url("../img/skills-bg.jpg") no-repeat 50% 0/cover fixed;
 }
 
-
+@media(max-width: 768px){
+    #menu{
+        display: block;
+    }
+    #nav-bar{
+        display: none;
+    }
+    #banner{
+        background-position: center;
+    }
+    #content{
+        width: 115px;
+    }
+    #about button{
+        width: 100%;
+        margin: 60px 0;
+    }
+}
 
 
 
