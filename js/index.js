@@ -7,7 +7,12 @@ requirejs.config({
     }
 });
 require(["jquery","dialog"], function ($,Dialog) {
-    var arrImg1=["img/01.png","img/02.png","img/03.png"];
+    var arrImg1=[];
+    if(document.body.clientWidth<=768){
+        arrImg1=["img/04.png","img/05.png","img/06.png"];
+    }else{
+        arrImg1=["img/01.png","img/02.png","img/03.png"];
+    }
     var settings1={
         selector:"#container",
         img:arrImg1,
@@ -162,4 +167,5 @@ $(function () {
             color:"#ed3267"
         });
     });
+
 });
