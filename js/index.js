@@ -167,5 +167,27 @@ $(function () {
             color:"#ed3267"
         });
     });
-
+    mask();
+    function mask(){
+        var maskNum =0;
+        var aSpinner=document.getElementsByClassName('spinner');
+        var maskTimer=setInterval(function () {
+            maskNum++;
+            //console.log(maskNum);
+            if(maskNum==3){
+                clearInterval(maskTimer);
+                aSpinner[0].style.display="none";
+            }
+        },1000)
+    }
+    rotate();
+    function rotate(){
+        var rotateNum=0;
+        var rotateTimer=setInterval(function () {
+            rotateNum++;
+            $('#name').css({
+                transform:"rotateY("+rotateNum*8+"deg)"
+            })
+        },3000/60);
+    }
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <title></title>
+    <title>LX</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
@@ -16,6 +16,11 @@
 
 </head>
 <body>
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
     <div id="nav">
         <div class="container">
             <div id="brand">
@@ -45,8 +50,9 @@
     <div id="banner">
         <canvas id='canvas'></canvas>
         <div id="content">
-            <p class="text-center" >LiXue</p>
+            <p class="text-center" id="name">LiXue</p>
             <p class="text-center" >前端工程师</p>
+            <div id="slogan" data-text="Maybe we'll be stronger"></div>
             <button class="selected contact">联系我</button>
             <button>下载简历</button>
         </div>
@@ -219,7 +225,8 @@
         <div class="line">
             <span></span>
         </div>
-        <h2 class="text-center">仿站</h2>
+        <h2 class="text-center"><a href="demo.html">1.原生js打气球</a></h2>
+        <h2 class="text-center">2.仿站</h2>
         <div id="container"></div>
     </div>
     <div id="contact-me">
@@ -249,5 +256,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/StarSky.js"></script>
     <script src="js/require.js" data-main="js/index"></script>
+    <script src="js/text.js"></script>
 </body>
 </html>
