@@ -71,89 +71,89 @@ $(function () {
     }else{
         target=$("body");
     }
-    //到某元素
-    //$(".home").on("click",function(e){
-    //    e.preventDefault();
-    //    var timer=setInterval(function () {
-    //        var top=target.scrollTop();
-    //        if(top<=$("#banner").offset().top){
-    //            clearInterval(timer);
-    //        }
-    //        target.scrollTop(top-=30);
-    //    },20)
-    //});
-    //$(".introduce").on("click", function (e) {
-    //    e.preventDefault();
-    //    var topStyle=target.scrollTop();
-    //    if(topStyle<=$("#about").offset().top-75){
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top>=$("#about").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top+=30);
-    //        },20)
-    //    }else{
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top<=$("#about").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top-=30);
-    //        },20)
-    //    }
-    //});
-    //$(".skill").on("click", function (e) {
-    //    var topStyle=target.scrollTop();
-    //    if(topStyle<=$("#my-skills").offset().top-75){
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top>=$("#my-skills").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top+=30);
-    //        },20)
-    //    }else{
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top<=$("#my-skills").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top-=30);
-    //        },20)
-    //    }
-    //    e.preventDefault();
-    //});
-    //$(".item").on("click", function (e) {
-    //    e.preventDefault();
-    //    var topStyle=target.scrollTop();
-    //    if(topStyle<=$("#project").offset().top-75){
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top>=$("#project").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top+=30);
-    //        },20)
-    //    }else{
-    //        var timer=setInterval(function () {
-    //            var top=target.scrollTop();
-    //            if(top<=$("#project").offset().top-75){
-    //                clearInterval(timer);
-    //            }
-    //            target.scrollTop(top-=30);
-    //        },20)
-    //    }
-    //});
-    //$(".contact").on("click", function () {
-    //    var timer=setInterval(function () {
-    //        var iScrollTop=target.scrollTop();
-    //        if(iScrollTop>=$(document).height()-$(window).height() ){
-    //            clearInterval(timer);
-    //        }
-    //        target.scrollTop(iScrollTop+=50);
-    //    },20);
-    //});
+    到某元素
+    $(".home").on("click",function(e){
+        e.preventDefault();
+        var timer=setInterval(function () {
+            var top=target.scrollTop();
+            if(top<=$("#banner").offset().top){
+                clearInterval(timer);
+            }
+            target.scrollTop(top-=30);
+        },20)
+    });
+    $(".introduce").on("click", function (e) {
+        e.preventDefault();
+        var topStyle=target.scrollTop();
+        if(topStyle<=$("#about").offset().top-75){
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top>=$("#about").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top+=30);
+            },20)
+        }else{
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top<=$("#about").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top-=30);
+            },20)
+        }
+    });
+    $(".skill").on("click", function (e) {
+        var topStyle=target.scrollTop();
+        if(topStyle<=$("#my-skills").offset().top-75){
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top>=$("#my-skills").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top+=30);
+            },20)
+        }else{
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top<=$("#my-skills").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top-=30);
+            },20)
+        }
+        e.preventDefault();
+    });
+    $(".item").on("click", function (e) {
+        e.preventDefault();
+        var topStyle=target.scrollTop();
+        if(topStyle<=$("#project").offset().top-75){
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top>=$("#project").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top+=30);
+            },20)
+        }else{
+            var timer=setInterval(function () {
+                var top=target.scrollTop();
+                if(top<=$("#project").offset().top-75){
+                    clearInterval(timer);
+                }
+                target.scrollTop(top-=30);
+            },20)
+        }
+    });
+    $(".contact").on("click", function () {
+        var timer=setInterval(function () {
+            var iScrollTop=target.scrollTop();
+            if(iScrollTop>=$(document).height()-$(window).height() ){
+                clearInterval(timer);
+            }
+            target.scrollTop(iScrollTop+=50);
+        },20);
+    });
 
     $("#nav-bar li").on("click", function () {
         $(this).addClass("active").siblings().removeClass("active");
