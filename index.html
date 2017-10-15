@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="css/dialog.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="shortcut icon" href=" img/favicon.ico" />
+    <script>
+        window.onload=function(){
+            var oSpinner=document.getElementsByClassName('spinner');
+            var oHt=document.getElementById('ht');
+            oSpinner[0].style.display='none';
+            oHt.style.display='block';
+        };
+    </script>
 </head>
 <body>
     <div class="spinner">
@@ -20,232 +28,234 @@
         <div class="bounce2"></div>
         <div class="bounce3"></div>
     </div>
-    <div id="nav">
-        <div class="container">
-            <div id="brand">
-                <img src="img/logo.png" alt="" style="width:50px"/>
+    <div id="ht">
+        <div id="nav">
+            <div class="container">
+                <div id="brand">
+                    <img src="img/logo.png" alt="" style="width:50px"/>
+                </div>
+                <ul id="nav-bar">
+                    <li class=" home"><a href="#banner" class="scroll  active ">主页</a></li>
+                    <li class="introduce"><a href="#about"  class="scroll">简介</a></li>
+                    <li class="skill"><a href="#my-skills"  class="scroll">技能</a></li>
+                    <li class="item"><a href="#project"  class="scroll">项目</a></li>
+                    <li class="contact"><a href="#contact-me"  class="scroll">联系我</a></li>
+                </ul>
+                <div id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="sub">
+                    <li class="text-right home">主页</li>
+                    <li class="text-right introduce">简介</li>
+                    <li class="text-right skill">技能</li>
+                    <li class="text-right item">项目</li>
+                    <li class="text-right contact">联系我</li>
+                </ul>
             </div>
-            <ul id="nav-bar">
-                <li class="active home">主页</li>
-                <li class="introduce">简介</li>
-                <li class="skill">技能</li>
-                <li class="item">项目</li>
-                <li class="contact">联系我</li>
-            </ul>
-            <div id="menu">
+        </div>
+        <div id="banner">
+            <canvas id='canvas'></canvas>
+            <div id="content">
+                <p class="text-center" id="name">LiXue</p>
+                <p class="text-center" >前端工程师</p>
+                <div id="slogan" data-text="Maybe we'll be stronger"></div>
+                <button class="contact"><a href="#contact-me"  class="scroll selected ">联系我</a></button>
+                <button><a href="#"  class="scroll">下载简历</a></button>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center">我能做什么？</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="aimg2">
+                            <i class="fa fa-html5"></i>
+                            前端开发
+                        </div>
+                        <div class="aimg1">
+                            <p>缺少前端工程师?
+                                本人精通原生Js可进行组件开发，也擅长使用各种前端框架进行工程性开发。</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 ">
+                        <div class="aimg2">
+                            <i class="fa fa-pencil"></i>
+                            UI
+                        </div>
+                        <div class="aimg1">
+                            <p>人手不够？
+                                我可以顶上。但坦白讲，我觉得自己的配色没有专业的人那么好。</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="aimg2">
+                            <i class="fa fa-desktop"></i>
+                            产品设计
+                        </div>
+                        <div class="aimg1">
+                            <p>有大致的方向没有具体思路？让我来好了，我喜欢通过各种资源的整合运用，创造出有生命力的新产品。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-6 col-md-4">
+                        <div class="myself"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-8">
+                        <h1 class="text-center">个人资料</h1>
+                        <ul class="self-info">
+                            <li>姓名:李雪</li>
+                            <li>出生日期:1997年阴历10月21日</li>
+                            <li>地址:东北农业大学北区第六公寓</li>
+                            <li>手机号码:15663423507</li>
+                            <li>邮箱:15663423507@163.com</li>
+                            <li>个人博客:xxxxx</li>
+                        </ul>
+                        <button class="contact"><a href="#contact-me"  class="scroll">联系我</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 ">
+                        <div class="skills-content text-center">
+                            <i class="fa fa-cog"></i>
+                            <h3 class="text-center" id="year"></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 ">
+                        <div class="skills-content text-center">
+                            <i class="fa fa-cog"></i>
+                            <h3 class="text-center" id="month"></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 ">
+                        <div class="skills-content text-center">
+                            <i class="fa fa-cog"></i>
+                            <h3 class="text-center" id="date"></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 ">
+                        <div class="skills-content text-center">
+                            <i class="fa fa-cog"></i>
+                            <h3 class="text-center" id="time"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="my-skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-center">我的技能条</h1>
+                        <div class="line">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Html5&nbsp;&nbsp;80%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Css3&nbsp;&nbsp;80%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Javascript&nbsp;&nbsp;70%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+                                <span class="sr-only">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Wordpress&nbsp;&nbsp;80%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Jquery&nbsp;&nbsp;60%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                <span class="sr-only">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Requirejs,Seajs&nbsp;&nbsp;60%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                <span class="sr-only">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Bootstrap&nbsp;&nbsp;60%</p>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                <span class="sr-only">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-bg"></div>
+        </div>
+        <div id="project">
+            <h1 class="text-center">目前做过的项目</h1>
+            <div class="line">
                 <span></span>
-                <span></span>
-                <span></span>
             </div>
-            <ul class="sub">
-                <li class="text-right home">主页</li>
-                <li class="text-right introduce">简介</li>
-                <li class="text-right skill">技能</li>
-                <li class="text-right item">项目</li>
-                <li class="text-right contact">联系我</li>
-            </ul>
+            <h2 class="text-center">1.仿站</h2>
+            <div id="container"></div>
         </div>
-    </div>
-    <div id="banner">
-        <canvas id='canvas'></canvas>
-        <div id="content">
-            <p class="text-center" id="name">LiXue</p>
-            <p class="text-center" >前端工程师</p>
-            <div id="slogan" data-text="Maybe we'll be stronger"></div>
-            <button class="selected contact">联系我</button>
-            <button>下载简历</button>
-        </div>
-    </div>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <h1 class="text-center">我能做什么？</h1>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="aimg2">
-                        <i class="fa fa-html5"></i>
-                        前端开发
+        <div id="contact-me">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">联系方式</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        number:15663423507
                     </div>
-                    <div class="aimg1">
-                        <p>缺少前端工程师?
-                            本人精通原生Js可进行组件开发，也擅长使用各种前端框架进行工程性开发。</p>
+                    <div class="col-xs-6 text-center">
+                        qq:1281820069
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        weixin:Dog_1997
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 ">
-                    <div class="aimg2">
-                        <i class="fa fa-pencil"></i>
-                        UI
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        备案号： <a href="http://www.miitbeian.gov.cn/">黑ICP备17007178号</a>
                     </div>
-                    <div class="aimg1">
-                        <p>人手不够？
-                            我可以顶上。但坦白讲，我觉得自己的配色没有专业的人那么好。</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="aimg2">
-                        <i class="fa fa-desktop"></i>
-                        产品设计
-                    </div>
-                    <div class="aimg1">
-                        <p>有大致的方向没有具体思路？让我来好了，我喜欢通过各种资源的整合运用，创造出有生命力的新产品。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class=" col-xs-12 col-sm-6 col-md-4">
-                    <div class="myself"></div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-8">
-                    <h1 class="text-center">个人资料</h1>
-                    <ul class="self-info">
-                        <li>姓名:李雪</li>
-                        <li>出生日期:1997年阴历10月21日</li>
-                        <li>地址:东北农业大学北区第六公寓</li>
-                        <li>手机号码:15663423507</li>
-                        <li>邮箱:15663423507@163.com</li>
-                        <li>个人博客:xxxxx</li>
-                    </ul>
-                    <button class="contact">联系我</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="skills">
-        <div class="container">
-            <div class="row">
-               <div class="col-xs-12 col-sm-6 col-md-3 ">
-                    <div class="skills-content text-center">
-                        <i class="fa fa-cog"></i>
-                        <h3 class="text-center" id="year"></h3>
-                    </div>
-               </div>
-               <div class="col-xs-12 col-sm-6 col-md-3 ">
-                   <div class="skills-content text-center">
-                       <i class="fa fa-cog"></i>
-                       <h3 class="text-center" id="month"></h3>
-                   </div>
-               </div>
-               <div class="col-xs-12 col-sm-6 col-md-3 ">
-                   <div class="skills-content text-center">
-                       <i class="fa fa-cog"></i>
-                       <h3 class="text-center" id="date"></h3>
-                   </div>
-               </div>
-               <div class="col-xs-12 col-sm-6 col-md-3 ">
-                   <div class="skills-content text-center">
-                       <i class="fa fa-cog"></i>
-                       <h3 class="text-center" id="time"></h3>
-                   </div>
-               </div>
-           </div>
-        </div>
-    </div>
-    <div id="my-skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center">我的技能条</h1>
-                    <div class="line">
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <p>Html5&nbsp;&nbsp;80%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
-                                aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Css3&nbsp;&nbsp;80%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Javascript&nbsp;&nbsp;70%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30"
-                             aria-valuemin="0" aria-valuemax="100" style="width:70%;">
-                            <span class="sr-only">70%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Wordpress&nbsp;&nbsp;80%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Jquery&nbsp;&nbsp;60%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
-                             aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                            <span class="sr-only">60%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Requirejs,Seajs&nbsp;&nbsp;60%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
-                             aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                            <span class="sr-only">60%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>Bootstrap&nbsp;&nbsp;60%</p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
-                             aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                            <span class="sr-only">60%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="skills-bg"></div>
-    </div>
-    <div id="project">
-        <h1 class="text-center">目前做过的项目</h1>
-        <div class="line">
-            <span></span>
-        </div>
-        <h2 class="text-center">1.仿站</h2>
-        <div id="container"></div>
-    </div>
-    <div id="contact-me">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">联系方式</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 text-center">
-                    number:15663423507
-                </div>
-                <div class="col-xs-6 text-center">
-                    qq:1281820069
-                </div>
-                <div class="col-xs-6 text-center">
-                    weixin:Dog_1997
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    备案号： <a href="http://www.miitbeian.gov.cn/">黑ICP备17007178号</a>
                 </div>
             </div>
         </div>

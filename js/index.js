@@ -71,92 +71,17 @@ $(function () {
     }else{
         target=$("body");
     }
-    到某元素
-    $(".home").on("click",function(e){
+    //到某元素
+    $('a.scroll').on("click", function (e) {
         e.preventDefault();
-        var timer=setInterval(function () {
-            var top=target.scrollTop();
-            if(top<=$("#banner").offset().top){
-                clearInterval(timer);
-            }
-            target.scrollTop(top-=30);
-        },20)
-    });
-    $(".introduce").on("click", function (e) {
-        e.preventDefault();
-        var topStyle=target.scrollTop();
-        if(topStyle<=$("#about").offset().top-75){
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top>=$("#about").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top+=30);
-            },20)
-        }else{
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top<=$("#about").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top-=30);
-            },20)
-        }
-    });
-    $(".skill").on("click", function (e) {
-        var topStyle=target.scrollTop();
-        if(topStyle<=$("#my-skills").offset().top-75){
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top>=$("#my-skills").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top+=30);
-            },20)
-        }else{
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top<=$("#my-skills").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top-=30);
-            },20)
-        }
-        e.preventDefault();
-    });
-    $(".item").on("click", function (e) {
-        e.preventDefault();
-        var topStyle=target.scrollTop();
-        if(topStyle<=$("#project").offset().top-75){
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top>=$("#project").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top+=30);
-            },20)
-        }else{
-            var timer=setInterval(function () {
-                var top=target.scrollTop();
-                if(top<=$("#project").offset().top-75){
-                    clearInterval(timer);
-                }
-                target.scrollTop(top-=30);
-            },20)
-        }
-    });
-    $(".contact").on("click", function () {
-        var timer=setInterval(function () {
-            var iScrollTop=target.scrollTop();
-            if(iScrollTop>=$(document).height()-$(window).height() ){
-                clearInterval(timer);
-            }
-            target.scrollTop(iScrollTop+=50);
-        },20);
+        var that = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(that.attr('href')).offset().top - 50
+        }, 1000);
     });
 
-    $("#nav-bar li").on("click", function () {
-        $(this).addClass("active").siblings().removeClass("active");
+    $("#nav-bar a").on("click", function () {
+        $(this).addClass("active").parent().siblings().children('a').removeClass("active");
     });
     $(".sub li").on("mouseover", function () {
         $(this).css({
@@ -167,19 +92,6 @@ $(function () {
             color:"#ed3267"
         });
     });
-    mask();
-    function mask(){
-        var maskNum =0;
-        var aSpinner=document.getElementsByClassName('spinner');
-        var maskTimer=setInterval(function () {
-            maskNum++;
-            //console.log(maskNum);
-            if(maskNum==3){
-                clearInterval(maskTimer);
-                aSpinner[0].style.display="none";
-            }
-        },1000)
-    }
     rotate();
     function rotate(){
         var rotateNum=0;
