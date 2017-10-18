@@ -83,11 +83,11 @@ $(function () {
     $("#nav-bar a").on("click", function () {
         $(this).addClass("active").parent().siblings().children('a').removeClass("active");
     });
-    $(".sub li").on("mouseover", function () {
+    $(".sub a").on("mouseover", function () {
         $(this).css({
             background:"#ed3267",
             color:"#fff"
-        }).siblings().css({
+        }).parent().siblings().children('a').css({
             background:"#ffffff",
             color:"#ed3267"
         });
