@@ -92,6 +92,9 @@ $(function () {
             color:"#ed3267"
         });
     });
+    $('.contact a').on('click',function () {
+        $('#nav-bar .contact a').addClass("active").parent().siblings().children('a').removeClass("active");
+    });
     rotate();
     function rotate(){
         var rotateNum=0;
